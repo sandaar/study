@@ -132,7 +132,7 @@ def quicksort(array, start, end):
     quicksort(array, new_p_index + 1, end)
 
 def choose_pivot(array, start, end):
-    middle = (start + end) // 2
+    middle = start + (end - start) // 2
     median_list = [(array[start], start), (array[middle], middle), (array[end], end)]
     median_list.sort(key=lambda x: x[0])
     return median_list[1][1]

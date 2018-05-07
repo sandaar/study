@@ -131,11 +131,16 @@ def quicksort(array, start, end):
     quicksort(array, start, new_p_index - 1)
     quicksort(array, new_p_index + 1, end)
 
+
 def choose_pivot(array, start, end):
     middle = start + (end - start) // 2
-    median_list = [(array[start], start), (array[middle], middle), (array[end], end)]
-    median_list.sort(key=lambda x: x[0])
-    return median_list[1][1]
+    if (array[middle] - array[start]) * (array[end] - array[middle]) >= 0:
+        return middle
+    elif (array[start] - array[middle]) * (array[end] - array[start]) >= 0:
+        return start
+    else:
+        return end
+
 
 def partition(array, start, end, p_index):
     logger.debug("Start\n%s", array)

@@ -1,6 +1,3 @@
-#
-# Complete the mergeArrays function below.
-#
 class MinHeap(object):
     def __init__(self):
         self.size = 0

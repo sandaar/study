@@ -1,4 +1,4 @@
-# Complete the function below.
+
 def subsets(a, i, s, j, k):
     n = len(a)
     if i == n:

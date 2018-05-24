@@ -1,4 +1,4 @@
-# Complete the function below.
+
 import logging
 import sys
 

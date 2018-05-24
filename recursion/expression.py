@@ -1,4 +1,4 @@
-# Complete the function below.
+
 import re
 
 def sanitize(array):

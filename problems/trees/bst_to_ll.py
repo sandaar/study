@@ -1,3 +1,5 @@
+# Complete the function below.
+
 def transform(node):
     if not node:
         return None, None
@@ -19,9 +21,16 @@ def transform(node):
     
     return st1, end2
 
+def print_ll(node):
+    cur = node
+    while cur.right != node:
+        print(cur.val)
+        cur = cur.val
+    print(cur.val)
+    
 def  BSTtoLL(node):
     st, end = transform(node)
     st.left = end
     end.right = st
-    return node
+    print_ll(node)
 
